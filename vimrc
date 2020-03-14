@@ -2,6 +2,7 @@ if empty($NEW_VIM_SETUP_PATH)
   throw '$NEW_VIM_SETUP_PATH is empty or undefined'
 endif
 
+set number
 set ignorecase
 set tabstop      =2
 set softtabstop  =2
@@ -74,8 +75,6 @@ let g:lightline = {
 \ }
 call plug#end()
 
-set number
-
 colorscheme gruvbox
 
 
@@ -87,3 +86,7 @@ nnoremap K <C-w>k
 
 " Clear the search highlighting
 nnoremap <silent> <BS> :nohlsearch<CR>
+
+" Move half-page up or down
+nnoremap <A-k> <C-u>
+nnoremap <A-j> <C-d>
