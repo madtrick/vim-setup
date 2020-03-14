@@ -60,19 +60,6 @@ augroup end
 "
 " End coc.vim config
 "
-Plug 'itchyny/lightline.vim'
-" Do not output mode in the line under the status line
-set noshowmode
-let g:lightline = {
-  \ 'colorscheme': 'wombat',
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-  \ },
-  \ 'component_function': {
-  \   'cocstatus': 'coc#status'
-  \ }
-\ }
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
