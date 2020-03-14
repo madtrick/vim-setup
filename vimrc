@@ -73,6 +73,7 @@ let g:lightline = {
   \   'cocstatus': 'coc#status'
   \ }
 \ }
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 colorscheme gruvbox
