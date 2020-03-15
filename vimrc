@@ -2,6 +2,18 @@ if empty($NEW_VIM_SETUP_PATH)
   throw '$NEW_VIM_SETUP_PATH is empty or undefined'
 endif
 
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  " Copy to the clipboard when yankin
+  set clipboard=unnamed
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+let mapleader = ";"
+
 set number
 set ignorecase
 set tabstop      =2
