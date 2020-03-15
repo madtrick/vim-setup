@@ -62,7 +62,7 @@ endfunction
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-" Use K to show documentation in preview window.
+" Use Shift-m to show documentation in preview window.
 nnoremap <silent> <S-m> :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
@@ -89,6 +89,8 @@ Plug 'junegunn/fzf.vim'
 " non tracked files as for example anything under `node_modules`
 nnoremap <c-F> :GFiles<CR>
 nnoremap W :W<CR>
+Plug 'pbrisbin/vim-mkdir'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 colorscheme gruvbox
