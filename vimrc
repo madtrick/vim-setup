@@ -70,6 +70,12 @@ augroup end
 " End coc.vim config
 "
 Plug 'jiangmiao/auto-pairs'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+" Use GFiles instead of plain Files to avoid getting results for
+" non tracked files as for example anything under `node_modules`
+nnoremap <c-F> :GFiles<CR>
+nnoremap W :W<CR>
 call plug#end()
 
 colorscheme gruvbox
