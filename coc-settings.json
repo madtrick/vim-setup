@@ -1,6 +1,7 @@
 {
 	"tsserver.enable": true,
 	"typescript.suggest.autoImports": true,
+	"suggest.maxCompleteItemCount": 15,
 	"eslint.enable": true,
 	"eslint.autoFix": true,
 	"eslint.autoFixOnSave": true,
