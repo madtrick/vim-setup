@@ -15,7 +15,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Begin coc.vim config
 "
 
-let g:coc_config_home='~/repos/personal/new-vim-setup'
+let g:coc_config_home='/Users/farruco/repos/personal/new-vim-setup'
+let g:coc_data_home='/Users/farruco/repos/personal/new-vim-setup/coc-vim/'
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
@@ -25,6 +26,14 @@ set updatetime=300
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 nmap <silent> gd <Plug>(coc-definition)
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if has('patch8.1.1068')
+  " Use `complete_info` if your (Neo)Vim version supports it.
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.

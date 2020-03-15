@@ -1,3 +1,4 @@
 vim/
 plugins/
 .envrc
+coc-vim/
