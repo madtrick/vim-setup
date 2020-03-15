@@ -85,10 +85,16 @@ augroup end
 Plug 'jiangmiao/auto-pairs'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-" Use GFiles instead of plain Files to avoid getting results for
-" non tracked files as for example anything under `node_modules`
-nnoremap <c-F> :GFiles<CR>
 nnoremap W :W<CR>
+
+" Create custom command PFiles (project files)
+" Uses recommendation from fzf to ignore files mentioned in the .gitignore
+" https://github.com/junegunn/fzf#respecting-gitignore
+command! -bang -nargs=? -complete=dir PFiles
+    \ call fzf#vim#files(<q-args>, {'source': 'fd --type f'}, <bang>0)
+" Use PFiles instead of plain Files to avoid getting results for
+" non tracked files as for example anything under `node_modules`
+nnoremap <c-F> :PFiles<CR>
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-commentary'
 call plug#end()
