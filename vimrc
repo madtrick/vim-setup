@@ -79,6 +79,8 @@ augroup mygroup
   " Highlight the symbol and its references when holding the cursor.
   autocmd CursorHold * silent call CocActionAsync('highlight')
 augroup end
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
 "
 " End coc.vim config
 "
