@@ -111,6 +111,9 @@ call plug#end()
 
 colorscheme gruvbox
 
+" Minimal statusline
+set statusline=%<%f\ %h%m%r\ %{coc#status()}%=%-14.(%l,%c%V%)\ %P
+
 
 " Move with ease
 nnoremap H <C-w>h
