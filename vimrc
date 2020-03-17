@@ -103,6 +103,10 @@ command! -bang -nargs=? -complete=dir PFiles
 nnoremap <c-F> :PFiles<CR>
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-commentary'
+Plug 'liuchengxu/vista.vim'
+let g:vista_default_executive = 'coc'
+let g:vista#renderer#enable_icon = 0
+nnoremap <silent> <leader>v :Vista finder<CR>
 call plug#end()
 
 colorscheme gruvbox
