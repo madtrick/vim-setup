@@ -87,6 +87,10 @@ nmap <leader>rn <Plug>(coc-rename)
 Plug 'jiangmiao/auto-pairs'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+Plug 'kana/vim-textobj-user' " required for vim-textobj-line
+Plug 'kana/vim-textobj-line'
+Plug 'tpope/vim-vinegar'
 nnoremap W :W<CR>
 
 " Create custom command PFiles (project files)
