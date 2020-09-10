@@ -17,9 +17,11 @@ let mapleader = ";"
 set number
 set ignorecase
 set expandtab
-set tabstop      =2
-set softtabstop  =2
-set shiftwidth   =2
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set list
+set listchars+=trail:¶
 
 call plug#begin($NEW_VIM_SETUP_PATH.'/plugins')
 Plug 'morhetz/gruvbox'
