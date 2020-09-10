@@ -138,3 +138,6 @@ nnoremap <silent> <BS> :nohlsearch<CR>
 " Move half-page up or down
 nnoremap <A-k> <C-u>
 nnoremap <A-j> <C-d>
+
+" Select previously pasted object
+nnoremap gV `[v`]
