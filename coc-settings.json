@@ -2,8 +2,11 @@
 	"tsserver.enable": true,
 	"typescript.suggest.autoImports": true,
 	"suggest.maxCompleteItemCount": 15,
-	"eslint.enable": true,
+  "eslint.enable": true,
 	"eslint.autoFix": true,
 	"eslint.autoFixOnSave": true,
-	"eslint.filetypes": ["typescript"]
+  "eslint.filetypes": ["typescript", "typescriptreact", "javascript"],
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": ["js", "ts"]
 }
