@@ -109,6 +109,15 @@ Plug 'liuchengxu/vista.vim'
 let g:vista_default_executive = 'coc'
 let g:vista#renderer#enable_icon = 0
 nnoremap <silent> <leader>v :Vista finder<CR>
+Plug 'tpope/vim-fugitive'
+" Required to have highlighting in JSX/TSX files
+Plug 'peitalin/vim-jsx-typescript'
+" To get real nice TS syntax highlighting
+
+" This setting is a suggestion from Yats:
+"   Old regexp engine will incur performance issues for yats and old engine is
+"   usually turned on by other plugins.
+Plug 'HerringtonDarkholme/yats.vim'
 call plug#end()
 
 colorscheme gruvbox
