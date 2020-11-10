@@ -88,7 +88,7 @@ nmap <c-a> <Plug>(coc-codeaction)
 " End coc.vim config
 "
 Plug 'jiangmiao/auto-pairs'
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'kana/vim-textobj-user' " required for vim-textobj-line
