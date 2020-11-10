@@ -83,7 +83,8 @@ augroup mygroup
 augroup end
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
-"
+" CocAction
+nmap <c-a> <Plug>(coc-codeaction)
 " End coc.vim config
 "
 Plug 'jiangmiao/auto-pairs'
