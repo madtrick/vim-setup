@@ -26,6 +26,11 @@ set listchars+=trail:¶
 call plug#begin($NEW_VIM_SETUP_PATH.'/plugins')
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/jsonc.vim'
+" tsconfig.json is actually jsonc, help TypeScript set the correct filetype
+autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+autocmd BufRead,BufNewFile api-extractor.json set filetype=jsonc
+
 "
 " Begin coc.vim config
 "
