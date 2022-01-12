@@ -1,7 +1,3 @@
-if empty($NEW_VIM_SETUP_PATH)
-  throw '$NEW_VIM_SETUP_PATH is empty or undefined'
-endif
-
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -23,7 +19,10 @@ set shiftwidth=2
 set list
 set listchars+=trail:¶
 
-call plug#begin($NEW_VIM_SETUP_PATH.'/plugins')
+" Got the trick to the current directory from https://stackoverflow.com/a/18734557
+let s:current_directory = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+
+call plug#begin(s:current_directory.'/plugins')
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/jsonc.vim'
