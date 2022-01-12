@@ -76,7 +76,7 @@ function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
-    call CocAction('doHover')
+    call CocActionAsync('doHover')
   endif
 endfunction
 augroup mygroup
@@ -123,7 +123,9 @@ Plug 'peitalin/vim-jsx-typescript'
 " This setting is a suggestion from Yats:
 "   Old regexp engine will incur performance issues for yats and old engine is
 "   usually turned on by other plugins.
+set re=0
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'pantharshit00/vim-prisma'
 call plug#end()
 
 colorscheme gruvbox
@@ -147,3 +149,9 @@ nnoremap <A-j> <C-d>
 
 " Select previously pasted object
 nnoremap gV `[v`]
+
+"-- FOLDING --
+set foldmethod=syntax "syntax highlighting items specify folds
+set foldcolumn=1 "defines 1 col at window left, to indicate folding
+let javaScript_fold=1 "activate folding by JS syntax
+set foldlevelstart=99 "start file with all folds opened

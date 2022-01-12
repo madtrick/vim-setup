@@ -5,8 +5,15 @@
   "eslint.enable": true,
 	"eslint.autoFix": true,
 	"eslint.autoFixOnSave": true,
+  "eslint.options": {
+    "extensions": [".js", ".ts"]
+  },
   "eslint.filetypes": ["typescript", "typescriptreact", "javascript"],
-  "tslint.enable": true,
-  "tslint.autoFixOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": ["js", "ts"]
+  "tslint.enable": false,
+  "tslint.autoFixOnSave": false,
+  "coc.preferences.formatOnSaveFiletypes": ["js", "ts", "prisma"],
+  "sql.lintOnOpen":false,
+  "sql.lintOnSave": false,
+  "sql.lintOnChange": false,
+  "prisma.prismaFmtBinPath": ""
 }
