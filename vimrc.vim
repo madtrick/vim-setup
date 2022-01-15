@@ -1,3 +1,10 @@
+"
+" Note that for this configuration to be loaded when the editor is launched
+" I had to put the following contents in the file ~/.config/nvim/init.vim
+"
+" source ~/.vimrc
+"
+
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -34,8 +41,8 @@ autocmd BufRead,BufNewFile api-extractor.json set filetype=jsonc
 " Begin coc.vim config
 "
 
-let g:coc_config_home='/Users/farruco/repos/personal/new-vim-setup'
-let g:coc_data_home='/Users/farruco/repos/personal/new-vim-setup/coc-vim/'
+let g:coc_config_home=s:current_directory
+let g:coc_data_home=g:coc_config_home.'/coc-vim/'
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
@@ -103,11 +110,14 @@ nnoremap W :W<CR>
 " Create custom command PFiles (project files)
 " Uses recommendation from fzf to ignore files mentioned in the .gitignore
 " https://github.com/junegunn/fzf#respecting-gitignore
+"
+" Note that this requires 'fd' to be installed
 command! -bang -nargs=? -complete=dir PFiles
     \ call fzf#vim#files(<q-args>, {'source': 'fd --type f'}, <bang>0)
 " Use PFiles instead of plain Files to avoid getting results for
 " non tracked files as for example anything under `node_modules`
 nnoremap <c-F> :PFiles<CR>
+
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-commentary'
 Plug 'liuchengxu/vista.vim'
