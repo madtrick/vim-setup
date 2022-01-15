@@ -109,11 +109,17 @@ nnoremap W :W<CR>
 
 " Create custom command PFiles (project files)
 " Uses recommendation from fzf to ignore files mentioned in the .gitignore
-" https://github.com/junegunn/fzf#respecting-gitignore
+" From: https://github.com/junegunn/fzf#respecting-gitignore
 "
 " Note that this requires 'fd' to be installed
+"
+" The configuration also uses the 'with_preview' helper
+" to get the preview window options
+"
+" From: https://github.com/junegunn/fzf.vim#example-customizing-files-command
 command! -bang -nargs=? -complete=dir PFiles
-    \ call fzf#vim#files(<q-args>, {'source': 'fd --type f'}, <bang>0)
+      \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'source': 'fd --type f', 'options': ['--info=inline']}), <bang>0)
+
 " Use PFiles instead of plain Files to avoid getting results for
 " non tracked files as for example anything under `node_modules`
 nnoremap <c-F> :PFiles<CR>
