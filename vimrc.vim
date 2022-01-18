@@ -41,6 +41,16 @@ autocmd BufRead,BufNewFile api-extractor.json set filetype=jsonc
 " Begin coc.vim config
 "
 
+"
+" Important:
+"
+" I can't find a place to keep track of the coc plugins installe so here they
+" are:
+"
+" CocInstall coc-eslint
+" CocInstall coc-tsserver
+"
+
 let g:coc_config_home=s:current_directory
 let g:coc_data_home=g:coc_config_home.'/coc-vim/'
 " Always show the signcolumn, otherwise it would shift the text each time
