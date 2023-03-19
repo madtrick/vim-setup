@@ -106,6 +106,9 @@ augroup end
 nmap <leader>rn <Plug>(coc-rename)
 " CocAction
 nmap <c-a> <Plug>(coc-codeaction)
+
+" Added this config following this https://github.com/neoclide/coc-prettier/commit/25b5fa55580f0958ceb428da789efd0808115f2c#diff-1550ec65ac92f65817fc28928dfef526912b5f52356ff43651369bae92f56031R96
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 " End coc.vim config
 "
 Plug 'jiangmiao/auto-pairs'
