@@ -15,5 +15,10 @@
   "sql.lintOnOpen":false,
   "sql.lintOnSave": false,
   "sql.lintOnChange": false,
-  "prisma.prismaFmtBinPath": ""
+  "prisma.prismaFmtBinPath": "",
+  "workspace.ignoredFolders": [
+    "$HOME",
+    "$HOME/.cargo/**",
+    "$HOME/.rustup/**"
+  ],
 }
